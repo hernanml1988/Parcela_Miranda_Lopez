@@ -12,6 +12,11 @@
 
 }
 
+#containerButton2{
+        visibility: hidden;
+}
+
+
 #contenedorPadre{
     /* border: 1px solid red; */
     margin-top: 15px;
@@ -23,6 +28,7 @@
     justify-content: center;
     align-items: center;
     gap: 100px;
+    background-color: rgb(20, 113, 1);
     /* background: linear-gradient(45deg, rgb(7, 64, 13),transparent); */
     border-radius: 15px;
     box-shadow: 0px 0px 5px 5px rgb(1, 65, 1);
@@ -117,7 +123,7 @@
 }
 
 #imagen{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     height: 450px;
     width: 470px;
     margin-left: 30px;
@@ -193,12 +199,14 @@
 #fondoDescripcion{
     position: absolute;
     width: 270px;
-    height: 350px;
+    height: 330px;
     background: bisque;
     transform: rotate(15deg);
-    z-index: -1;
-    margin-top: 25px;
+    z-index: 0;
+    margin-top: 30px;
     margin-left: 90px;
+    border-radius: 5px;
+    box-shadow: 15px 13px 22px 0px #23412b;
 
 }
 
@@ -212,3 +220,278 @@
     margin-left: 118px;
 
 }
+
+
+@media screen and (max-width: 1100px) {
+    .titulo h1{
+        color: white;
+        margin-top: 5px;
+        margin-left: 40px;
+        font-family: 'Dancing Script', cursive;
+    }
+
+    .titulo> h1 >span {
+        position: absolute;
+        right: 68px;
+        width: 0;
+        height: 50px;
+        background: rgb(20, 113, 1);
+        border-left: 3px solid black;
+        animation: escribir 6s steps(40) infinite alternate;
+    }
+    @keyframes escribir{
+        from{width: 33%;}
+        to{width: 0;}
+    }
+
+    .botonesMenu{
+        text-decoration: none;
+        color: white;
+        padding: 5px 25px;
+        position: relative;
+        /* border: 5px solid green; */
+        width:250px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    #contenedorPadre{
+        /* border: 1px solid red; */
+        margin-top: 15px;
+        max-width: 700px;
+        max-height: 1050px;
+        min-height: 1000px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        background-color: rgb(20, 113, 1);
+        /* background: linear-gradient(45deg, rgb(7, 64, 13),transparent); */
+        border-radius: 15px;
+        box-shadow: 0px 0px 5px 5px rgb(1, 65, 1);
+    }
+
+    #imagen{
+        /* border: 1px solid green; */
+        height: 450px;
+        width: 470px;
+        margin-left: 30px;
+        margin-top: -89px;
+    }
+
+    .titulo h1{
+        color: white;
+        margin-top: 5px;
+        margin-left: 43px;
+        font-family: 'Dancing Script', cursive;
+    }
+
+    .titulo> h1 >span {
+        position: absolute;
+        right: 270px;
+        width: 0;
+        height: 42px;
+        background: rgb(20, 113, 1);
+        border-left: 3px solid black;
+        animation: escribir 6s steps(40) infinite alternate;
+    }
+    @keyframes escribir{
+        from{width: 40%;}
+        to{width: 0;}
+    }
+
+    #titulo{
+        position: relative;
+        margin-left: 10px;
+    }
+
+    #descripcion{
+        /* border: 1px solid yellow; */
+        height: 450px;
+        width: 450px;
+        margin-top: -15px;
+    }  
+
+    #contenedorHijoImagen{
+        margin-top: 8px;
+        margin-left: 30px;
+        height: 73px;
+        width: 250px;
+        position: absolute;
+    
+    }
+    /************************************/
+    /*preparando el menu respónsive*/
+
+    #barraSuperior{
+        /* border: 1px solid blue; */
+        width: 100%;
+        height: 145px;
+        margin-top: -9px;           
+        background: rgb(7, 72, 1);
+        z-index: 100;
+        position: relative;
+
+    }
+
+    #contenedorImagenBarra{
+        position: absolute;
+        width: 350px;
+        height: 90px;
+        margin-left: 67px;
+        margin-top: -40px;
+        background-color: transparent;
+        /* border: 5px  solid yellow; */
+    }   
+
+    #menu{
+        width: 1000px;
+        height: 90px;
+        margin-left: -234px;
+        margin-top: 50px;
+        position: absolute;
+    }
+
+    #containerButton{
+        margin-right: 10px;
+        display: flex;
+        justify-content: end; 
+        font-size: 20px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+}
+            
+
+@media screen and (max-width: 550px) {
+
+    #barraSuperior{
+        /* border: 1px solid blue; */
+            width: 100%;
+            height: 180px;
+            margin-top: -9px;           
+            background: rgb(7, 72, 1);
+            z-index: 100;
+            position: relative;
+    
+    }
+
+    #contenedorPadre{
+        /* border: 1px solid red; */
+        margin-top: 15px;
+        max-width: 470px;
+        max-height: 1050px;
+        min-height: 1000px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        background-color: rgb(20, 113, 1);
+        /* background: linear-gradient(45deg, rgb(7, 64, 13),transparent); */
+        border-radius: 15px;
+        box-shadow: 0px 0px 5px 5px rgb(1, 65, 1);
+    }
+
+    .titulo h1{
+        color: white;
+        margin-top: -10px;
+        margin-left: 110px;
+        font-family: 'Dancing Script', cursive;
+    }
+
+    .titulo> h1 >span {
+        position: absolute;
+        right: 96px;
+        width: 0;
+        height: 42px;
+        background: rgb(20, 113, 1);
+        border-left: 3px solid black;
+        animation: escribir 6s steps(40) infinite alternate;
+    }
+    @keyframes escribir{
+        from{width: 60%;}
+        to{width: 0;}
+    }
+
+    #titulo{
+        position: relative;
+        margin-left: 10px;
+    }
+
+    #containerComent{
+        border: 1px solid white;
+        width: 401px;
+        height: 60px;
+        margin-left: -20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Dancing Script', cursive;
+        font-size: 35px;
+        z-index: 1;
+        margin-top: 35px;
+        position: absolute;
+        background: linear-gradient(50deg, rgb(70, 5, 5), rgba(188, 52, 52, 0.587), rgb(70, 5, 5));
+        transform: rotate(-10deg);
+        color: yellowgreen;
+        transition: all aese 0.5ms;
+    }
+
+    #containerImagen{
+        /* border: 1px solid blue; */
+        width: 300;
+        height: 417px;
+        margin: 5px 5px;
+        position: relative;
+        
+    }
+
+    #imagen{
+        /* border: 1px solid green; */
+        height: 450px;
+        width: 400px;
+        margin-left: 30px;
+        margin-top: -89px;
+    }
+
+    #menu{
+        width: 1000px;
+        height: 90px;
+        margin-left: -234px;
+        margin-top: 14px;
+        position: absolute;
+    }
+    
+    #containerButton{
+        margin-right: 55px;
+        display: none;
+        font-size: 20px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        
+    }
+    
+    /* #containerButton2{
+        visibility: visible;
+    }*/
+    #containerButton2{
+        width: 505px;
+        position: absolute;
+        margin-right: 136px;
+        margin-bottom: -28px;
+    } 
+
+    #contenedorImagenBarra{
+        width: 350px;
+        height: 90px;
+        margin-left: 0px;
+        margin-top: -71px;
+        position: relative;
+        background-color: transparent;
+        /* border: 5px solid yellow; */
+    }
+}
+
